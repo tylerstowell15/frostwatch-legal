@@ -1,0 +1,47 @@
+Getting Started
+
+After installing DataOps Command Center, run the following as ACCOUNTADMIN:
+
+text
+GRANT IMPORTED PRIVILEGES ON DATABASE SNOWFLAKE TO APPLICATION DATAOPS_COMMAND_CENTER;
+This grants read access to SNOWFLAKE.ACCOUNT_USAGE views, which power all discovery and observability features.
+
+Features
+
+Executive Dashboard: KPIs, critical assets, reliability leaderboard, health distribution
+Risk Analysis: Risk breakdown by owner role or database schema, with toggle
+Cost Intelligence: Storage cost per table, zombie table detection, cost vs. reliability analysis
+Asset Catalog: Searchable, filterable catalog of all tables and views in your account
+Asset 360: Deep dive into any asset with reliability scores and dependency mapping
+Lineage Explorer: Interactive dependency graph visualization
+Impact Analysis: Recursive blast radius — see what breaks if an asset changes
+Consumer Impact: Who queries what, orphan table detection, per-asset user breakdown
+Anomaly Detection: Pattern-based freshness monitoring with deviation alerts
+SLA Tracker: Automated compliance grading based on refresh cadence
+AI Copilot: Cortex-powered root cause analysis with one-click diagnostics
+Data Sources
+
+The app reads only from built-in Snowflake system views:
+
+SNOWFLAKE.ACCOUNT_USAGE.TABLES
+SNOWFLAKE.ACCOUNT_USAGE.OBJECT_DEPENDENCIES
+SNOWFLAKE.ACCOUNT_USAGE.ACCESS_HISTORY
+SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY
+SNOWFLAKE.ACCOUNT_USAGE.TABLE_STORAGE_METRICS
+SNOWFLAKE.ACCOUNT_USAGE.WAREHOUSE_METERING_HISTORY
+SNOWFLAKE.ACCOUNT_USAGE.TASK_HISTORY
+SNOWFLAKE.ACCOUNT_USAGE.COLUMNS
+No data leaves your account. No external connections are made.
+
+Demo Mode
+
+Enable Demo Mode in the sidebar to preview all features with synthetic data while your ACCOUNT_USAGE views populate (24-48 hours for new accounts).
+
+Requirements
+
+Role: ACCOUNTADMIN (for the GRANT command only)
+Warehouse: Any active warehouse
+Cortex AI: Available in most commercial Snowflake regions (powers the AI Copilot)
+Support
+
+For questions or issues, contact: frostwatchhelp@gmail.com
