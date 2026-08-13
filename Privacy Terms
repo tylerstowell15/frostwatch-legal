@@ -1,0 +1,48 @@
+Frostwatch Privacy Policy
+Last Updated: August 13, 2026
+
+Overview
+Frostwatch ("we", "our", "the app") is a Snowflake Native App that provides data observability, cost intelligence, and operational insights. This policy describes how the app handles data within your Snowflake account.
+
+Data Collection and Processing
+What the app accesses
+Frostwatch reads metadata from the following Snowflake system views within your account:
+
+SNOWFLAKE.ACCOUNT_USAGE.TABLES — Table names, owners, row counts, timestamps
+SNOWFLAKE.ACCOUNT_USAGE.OBJECT_DEPENDENCIES — View-to-table relationships
+SNOWFLAKE.ACCOUNT_USAGE.ACCESS_HISTORY — Query access patterns (user, object, timestamp)
+SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY — Query performance metrics
+SNOWFLAKE.ACCOUNT_USAGE.TABLE_STORAGE_METRICS — Storage sizes
+SNOWFLAKE.ACCOUNT_USAGE.WAREHOUSE_METERING_HISTORY — Warehouse credit usage
+SNOWFLAKE.ACCOUNT_USAGE.TASK_HISTORY — Task execution status
+SNOWFLAKE.ACCOUNT_USAGE.COLUMNS — Column metadata for schema change detection
+What the app stores
+Data contracts configuration — User-defined SLA rules stored in an app-internal table (app_config.data_contracts) within your Snowflake account.
+No external storage — All data remains within your Snowflake account at all times.
+What the app does NOT access
+The contents (rows/values) of your data tables
+Credentials, secrets, or authentication tokens
+Personal data beyond Snowflake usernames in access logs
+Any data outside your Snowflake account
+Data Transmission
+Frostwatch does not transmit any data outside your Snowflake account. The app runs entirely within Snowflake's infrastructure. There are no external API calls, no telemetry sent to third parties, and no data exfiltration of any kind.
+
+The only external service used is Snowflake's built-in Cortex AI (SNOWFLAKE.CORTEX.COMPLETE) for the AI copilot feature, which is processed within Snowflake's own infrastructure.
+
+Data Retention
+The app does not maintain persistent copies of your account metadata.
+Cached query results are held in memory for up to 10 minutes to improve performance and are not persisted.
+Data contracts you define persist until you delete them.
+Security
+The app operates with the minimum privileges required (IMPORTED PRIVILEGES ON DATABASE SNOWFLAKE for metadata access).
+All processing occurs within your Snowflake account's security boundary.
+The app does not create external network connections.
+Your Rights
+You can uninstall the app at any time, which removes all app-internal data.
+You can revoke the IMPORTED PRIVILEGES grant to immediately cut off metadata access.
+You can delete individual data contracts through the app interface.
+Changes to This Policy
+We may update this policy as new features are added. Material changes will be communicated through the app's release notes on the Snowflake Marketplace.
+
+Contact
+For privacy questions or concerns, contact: frostwatchhelp@gmail.com
