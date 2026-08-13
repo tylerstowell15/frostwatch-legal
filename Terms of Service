@@ -1,0 +1,17 @@
+Frostwatch DataOps Command Center — Terms of Service
+
+Last Updated: August 13, 2026
+
+License. Frostwatch grants you a non-exclusive, non-transferable license to use the DataOps Command Center application within your Snowflake account.
+
+Acceptable Use. You may use the app for internal business observability purposes. You may not reverse engineer, redistribute, or resell the app.
+
+Data. The app reads only Snowflake system metadata (ACCOUNT_USAGE views). It does not access, copy, or transmit your actual data. All processing occurs within your Snowflake account.
+
+No Warranty. The app is provided "as is" without warranties of any kind. Frostwatch does not guarantee uninterrupted availability or accuracy of computed scores.
+
+Limitation of Liability. Frostwatch's total liability shall not exceed the amount paid for the app in the 12 months preceding the claim.
+
+Termination. You may uninstall the app at any time. Frostwatch may discontinue the app with 30 days' notice via Marketplace release notes.
+
+Changes. We may update these terms with new versions. Continued use after an update constitutes acceptance.
